@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AdminTests" preserve-order="true">
+	<listeners>
+		<listener class-name="common.testHelper.FailureRetryListener"/>
+		<listener class-name="common.testHelper.TestListener"/>
+	</listeners>
+
+	<test name="AdminTests">
+		<parameter name="browser" value="chrome"/>
+		<classes>
+			<class name="tests.admin.AdminTests">
+				<methods>
+					<include name="createNewAdminWithDuplicationName"/>
+					<include name="createNewAdminLogin"/>
+					<include name="createNewAdminLoginReEnable"/>
+					<include name="createNewAdminWithoutName"/>
+					<include name="createNewAdminWithoutEmail"/>
+					<include name="createNewAdminWithoutPassword"/>
+					<include name="createNewAdminLoginEdit"/>
+					<include name="createNewAdminLoginDisabled"/>
+					<include name="createNewAdminWithAtSymbolsInName"/>
+					<include name="createNewAdminWithoutDisplayName"/>
+					<include name="createNewAdminListUsers"/>
+					<include name="createNewAdminLoginChangePassword"/>
+					<include name="createNewAdmin"/>
+					<include name="createNewAdminWithDashSymbolsInName"/>
+					<include name="createNewAdminWithUnderscoreSymbolsInName"/>
+					<include name="createNewAdminWithHashSymbolsInName"/>
+					<include name="createNewAdminWithExclamationMarkSymbolsInName"/>
+					<include name="createNewAdminWithoutConfirmPassword"/>
+					<include name="createNewAdminWithPasswordLessThan8Characters"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
