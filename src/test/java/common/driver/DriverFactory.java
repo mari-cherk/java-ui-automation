@@ -4,7 +4,9 @@ import common.Utils;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.concurrent.TimeUnit;
 
@@ -25,7 +27,12 @@ public class DriverFactory {
     private void setUpDriver(String browser){
         if (browser.equalsIgnoreCase("Chrome")) {
             initChromeDriverPath();
-            driver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("-incognito");
+            options.addArguments("--disable-popup-blocking");
+            DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+            capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+            driver = new ChromeDriver(capabilities);
         } else if (browser.equalsIgnoreCase("IE")) {
             initInternetExplorerDriverPath();
             driver = new InternetExplorerDriver();
