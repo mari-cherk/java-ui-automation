@@ -19,7 +19,7 @@ public class PreconditionForAutomationTest extends BaseTest {
     }
 
     private void logoutAfterTest(){
-        dashboardPage.clickOnUserButton();
+       // dashboardPage.clickOnUserButton();
         Assert.assertTrue(userPage.pageIsDisplayed(), "User page should be displayed");
         userPage.makeLogout();
         Assert.assertTrue(loginPage.pageIsDisplayed(), "Login page should be displayed");

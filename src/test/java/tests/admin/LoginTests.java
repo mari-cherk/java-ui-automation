@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import tests.BaseTest;
 
 public class LoginTests extends BaseTest {
-
+/*
     @Test(description = "C19010 Login with Valid Credentials", priority = 1)
     public void loginWithValidCredentials(){
         driver.get(Config.BASE_URL);
@@ -38,4 +38,5 @@ public class LoginTests extends BaseTest {
         userPage.makeLogout();
         Assert.assertTrue(loginPage.pageIsDisplayed(), "Login page should be displayed");
     }
+    */
 }

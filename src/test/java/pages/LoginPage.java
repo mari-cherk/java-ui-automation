@@ -12,12 +12,14 @@ import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
 public class LoginPage extends BasePage {
-    private static final PageElement usernameField = new PageElement(
+  /*  private static final PageElement usernameField = new PageElement(
             "Username field",
             By.id("UserUsername"),
             true);
@@ -115,4 +117,53 @@ public class LoginPage extends BasePage {
         takeScreenshotByElement("Login User Form after");
         return screenshotCompare("Login User Form before", "Login User Form after", "Login User Form Diff");
     }
+    */
+
+    private static final PageElement usernameField = new PageElement(
+            "Username field",
+            By.id("identification"),
+            true);
+
+    private static final PageElement passwordField = new PageElement(
+            "Password field",
+            By.id("password"),
+            true);
+
+    private static final PageElement signInButton = new PageElement(
+            "Sign In button",
+            By.xpath("//*[@type='submit']"),
+            true);
+
+    public LoginPage(WebDriver driver){
+        super(driver);
+    }
+
+    @Override
+    public boolean pageIsDisplayed(){
+        return allRequiredElementDisplayed();
+    }
+
+    public void fillUsernameField(String strUserName) {
+        enterText(usernameField, strUserName);
+    }
+
+    public void fillPasswordField(String strPassword) {
+        enterText(passwordField, strPassword);
+    }
+
+    public void clickSignIn() {
+        check(signInButton);
+    }
+
+    public void makeLogin(String strUserName, String strPassword){
+
+        this.fillUsernameField(strUserName);
+        this.fillPasswordField(strPassword);
+        this.clickSignIn();
+    }
+
+    public void handleAlert() {
+        driver.switchTo().alert().dismiss();
+    }
 }
+

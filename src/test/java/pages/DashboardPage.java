@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 public class DashboardPage extends BasePage {
-    private static final PageElement dashboardButton = new PageElement(
+    /*private static final PageElement dashboardButton = new PageElement(
             "DASHBOARD button",
             By.id("nav-dashboard-btn"),
             true);
@@ -845,5 +845,37 @@ public class DashboardPage extends BasePage {
                 By.xpath("//td[contains(text(),'" + busName + "')]/..//*[@class='option' and contains(text(),'" + routeName + "')]"));
         click(routeOption);
     }
+    */
 
+    public static final PageElement configButton = new PageElement(
+            "Config Button",
+            By.cssSelector(".mega-octicon.octicon-gear"),
+            true);
+
+    public static final PageElement logoutButton = new PageElement(
+            "Logout Button",
+            By.className("logout"),
+            false);
+
+    public DashboardPage(WebDriver driver) {
+        super(driver);
+    }
+
+    @Override
+    public boolean pageIsDisplayed() {
+        return allRequiredElementDisplayed();
+    }
+
+    public void clickConfigButton(){
+        click(configButton);
+    }
+
+    public void clickLogoutButton(){
+        click(logoutButton);
+    }
+
+    public void makeLogout(){
+        clickConfigButton();
+        clickLogoutButton();
+    }
 }

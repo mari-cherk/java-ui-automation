@@ -13,7 +13,7 @@ public class ValidationTests extends BaseTest {
         Assert.assertTrue(loginPage.pageIsDisplayed(), "Login page should be displayed");
         loginPage.makeLogin(Config.USERNAME, Config.PASSWORD);
         Assert.assertTrue(dashboardPage.pageIsDisplayed(), "Dashboard page should be displayed");
-        Assert.assertTrue(dashboardPage.isToggleTrafficDisplayed(), "Trafic should be displayed on map");
+    /*    Assert.assertTrue(dashboardPage.isToggleTrafficDisplayed(), "Trafic should be displayed on map");
         Assert.assertTrue(dashboardPage.isToggleTrafficDisplayed(), "Trafic should be not visible on map");
         Assert.assertTrue(dashboardPage.isToggleRoutesDisplayed(), "Routes are displayed on map");
         Assert.assertTrue(dashboardPage.isToggleRoutesDisplayed(), "Routes are NOT displayed on map");
@@ -22,6 +22,6 @@ public class ValidationTests extends BaseTest {
         dashboardPage.clickOnToggleSidebarButton();
         Assert.assertTrue(dashboardPage.isSideBarNotPresent(), "Side Bar should be not displayed");
         dashboardPage.clickOnToggleSidebarButton();
-        Assert.assertTrue(dashboardPage.isSideBarPresent(), "Side Bar should be displayed");
+        Assert.assertTrue(dashboardPage.isSideBarPresent(), "Side Bar should be displayed");*/
     }
 }

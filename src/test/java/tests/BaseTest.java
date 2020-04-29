@@ -8,6 +8,7 @@ import org.testng.annotations.*;
 import pages.*;
 import workflows.*;
 
+import java.awt.*;
 import java.lang.reflect.*;
 
 public class BaseTest {
@@ -32,7 +33,7 @@ public class BaseTest {
         driver = new DriverFactory(browserName).getDriver();
         initPages();
     }
-
+/*
     @BeforeMethod
     public void logout() {
         if (dashboardPage.isAlertPresent()) {
@@ -47,7 +48,7 @@ public class BaseTest {
             Utils.sleep(3000);
             dashboardPage.isLoggedIn();
         }
-    }
+    }*/
 
     @AfterTest
     public void turnDown() {
