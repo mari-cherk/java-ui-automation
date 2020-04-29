@@ -167,6 +167,12 @@ public class LoginPage extends BasePage {
         this.clickSignIn();
     }
 
+    public void handleLoginAlert() throws AWTException {
+        Robot robot = new Robot();
+        robot.keyPress(KeyEvent.VK_TAB);
+        robot.keyPress(KeyEvent.VK_ENTER);
+    }
+
     public boolean errorMessageIsDisplayed(){
         return isElementPresent(errorMessage);
     }

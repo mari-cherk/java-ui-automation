@@ -373,7 +373,7 @@ public abstract class BasePage {
     /**
      * If Javascript Alert is present on the page cancels it.
      */
-    public void handleAlert()  {
+    public void handleAlert() throws AWTException {
         if(isAlertPresent()){
             Alert alert = driver.switchTo().alert();
             System.out.println(alert.getText());
@@ -396,7 +396,7 @@ public abstract class BasePage {
         }
     }
 
-    public void refreshPage() throws InterruptedException {
+    public void refreshPage() throws InterruptedException, AWTException {
         driver.navigate().refresh();
         handleAlert();
     }

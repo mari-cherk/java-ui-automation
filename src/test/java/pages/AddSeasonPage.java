@@ -6,6 +6,8 @@ import common.Utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.awt.*;
+
 public class AddSeasonPage extends BasePage {
     private static final PageElement listSeasonButton = new PageElement(
             "List Season button",
@@ -141,7 +143,7 @@ public class AddSeasonPage extends BasePage {
         clickOnSubmitButton();
     }
 
-    public void createSeason(String seasonName, String strStartDate, String strEndDate, boolean handleAlert){
+    public void createSeason(String seasonName, String strStartDate, String strEndDate, boolean handleAlert) throws AWTException {
         enterText(seasonNameField, seasonName);
         selectStartDate(strStartDate);
         selectEndDate(strEndDate);

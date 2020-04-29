@@ -9,14 +9,10 @@
 	<test name="LoginTests">
 		<parameter name="browser" value="chrome"/>
 		<classes>
-			<class name="tests.admin.LoginTests">
+			<class name="tests.clinical.doctor.LoginTests">
 				<methods>
 					<include name="loginWithValidCredentials"/>
-					<include name="loginWithInInvalidUser"/>
-					<include name="loginWithInInvalidPassword"/>
-					<include name="loginWithoutUsername"/>
-					<include name="loginWithoutPassword"/>
-					<include name="logout"/>
+					<include name="loginWithInvalidCredentials"/>
 				</methods>
 			</class>
 		</classes>
