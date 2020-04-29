@@ -134,6 +134,11 @@ public class LoginPage extends BasePage {
             By.xpath("//*[@type='submit']"),
             true);
 
+    private static final PageElement errorMessage = new PageElement(
+            "Error Message",
+            By.cssSelector(".alert.alert-danger.form-signin-alert"),
+            false);
+
     public LoginPage(WebDriver driver){
         super(driver);
     }
@@ -162,8 +167,8 @@ public class LoginPage extends BasePage {
         this.clickSignIn();
     }
 
-    public void handleAlert() {
-        driver.switchTo().alert().dismiss();
+    public boolean errorMessageIsDisplayed(){
+        return isElementPresent(errorMessage);
     }
 }
 
