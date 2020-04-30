@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LoginTests" preserve-order="true">
+	<listeners>
+		<listener class-name="common.testHelper.FailureRetryListener"/>
+		<listener class-name="common.testHelper.TestListener"/>
+	</listeners>
+
+	<test name="LoginTests">
+		<parameter name="browser" value="chrome"/>
+		<classes>
+			<class name="tests.clinical.doctor.LoginTests">
+				<methods>
+					<include name="loginWithValidCredentials"/>
+					<include name="loginWithInvalidCredentials"/>
+				</methods>
+			</class>
+			<class name="tests.clinical.nurse.LoginTestsNurse">
+				<methods>
+					<include name="loginWithValidCredentials"/>
+					<include name="loginWithInvalidCredentials"/>
+				</methods>
+			</class>
+			<class name="tests.clinical.nurseManager.LoginTestsNurseManager">
+				<methods>
+					<include name="loginWithValidCredentials"/>
+					<include name="loginWithInvalidCredentials"/>
+				</methods>
+			</class>
+			<class name="tests.administrative.hospitalAdmin.LoginTestsHospitalAdmin">
+				<methods>
+					<include name="loginWithValidCredentials"/>
+					<include name="loginWithInvalidCredentials"/>
+				</methods>
+			</class>
+			<class name="tests.administrative.businessOffice.LoginTestsBusinessOffice">
+				<methods>
+					<include name="loginWithValidCredentials"/>
+					<include name="loginWithInvalidCredentials"/>
+				</methods>
+			</class>
+			<class name="tests.support.pharacist.LoginTestsPharmacist">
+				<methods>
+					<include name="loginWithValidCredentials"/>
+					<include name="loginWithInvalidCredentials"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

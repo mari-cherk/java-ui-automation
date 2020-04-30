@@ -38,7 +38,7 @@ public class DriverFactory {
             driver = new InternetExplorerDriver();
         }
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     private void initChromeDriverPath(){

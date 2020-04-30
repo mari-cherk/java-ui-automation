@@ -15,6 +15,12 @@ public class BaseTest {
 
     protected LoginPage loginPage;
     protected DashboardPage dashboardPage;
+    protected DashboardPageDoctor dashboardPageDoctor;
+    protected DashboardPageNurse dashboardPageNurse;
+    protected DashboardPageNurseManager dashboardPageNurseManager;
+    protected DashboardPageHospitalAdmin dashboardPageHospitalAdmin;
+    protected DashboardPageBusinessOffice dashboardPageBusinessOffice;
+    protected DashboardPagePharmacist dashboardPagePharmacist;
     protected UserPage userPage;
     protected AddNewUserPage addNewUserPage;
     protected AdminWorkflow adminWorkflow;
@@ -27,7 +33,8 @@ public class BaseTest {
 
     public static WebDriver driver;
 
-    @BeforeTest
+    //@BeforeTest
+    @BeforeClass
     @Parameters("browser")
     public void setupTestRun(@Optional("Chrome") String browserName) {
         driver = new DriverFactory(browserName).getDriver();
@@ -50,7 +57,8 @@ public class BaseTest {
         }
     }*/
 
-    @AfterTest
+    //@AfterTest
+    @AfterClass
     public void turnDown() {
         if (driver != null) {
             driver.quit();
@@ -61,6 +69,12 @@ public class BaseTest {
     private void initPages() {
         loginPage = new LoginPage(driver);
         dashboardPage = new DashboardPage(driver);
+        dashboardPageDoctor = new DashboardPageDoctor(driver);
+        dashboardPageNurse = new DashboardPageNurse(driver);
+        dashboardPageNurseManager = new DashboardPageNurseManager(driver);
+        dashboardPageHospitalAdmin = new DashboardPageHospitalAdmin(driver);
+        dashboardPageBusinessOffice = new DashboardPageBusinessOffice(driver);
+        dashboardPagePharmacist = new DashboardPagePharmacist(driver);
         userPage = new UserPage(driver);
         addNewUserPage = new AddNewUserPage(driver);
         adminWorkflow = new AdminWorkflow(driver);

@@ -143,6 +143,7 @@ public abstract class BasePage {
         return elements;
     }
 
+
     protected boolean allRequiredElementDisplayed(){
         waitForPageLoaded();
         log.info("Checking if all required elements present on page");

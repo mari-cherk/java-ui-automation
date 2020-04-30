@@ -31,6 +31,16 @@ public class Config {
     public static final String VENDORPASS = "p@sst3st";
     public static final String DOCTORNAME = "hr.doctor@hospitalrun.io";
     public static final String DOCTORPASS = "HRt3st12";
+    public static final String NURSENAME = "hr.nurse@hospitalrun.io";
+    public static final String NURSEPASS = "HRt3st12";
+    public static final String NURSEMANAGERNAME = "hr.nurse.manager@hospitalrun.io";
+    public static final String NURSEMANAGERPASS = "HRt3st12";
+    public static final String HOSPITALADMINNAME = "hr.hospital.admin@hospitalrun.io";
+    public static final String HOSPITALADMINPASS = "HRt3st12";
+    public static final String BUSINESSOFFICENAME = "hr.hospital.office@hospitalrun.io";
+    public static final String BUSINESSOFFICEPASS = "HRt3st12";
+    public static final String PHARMACISTNAME = "hr.pharmacist@hospitalrun.io";
+    public static final String PHARMACISTPASS = "HRt3st12";
 
 
     // Credentials for users which will be created during auto-tests

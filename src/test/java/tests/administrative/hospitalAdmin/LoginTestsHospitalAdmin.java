@@ -1,4 +1,4 @@
-package tests.clinical.doctor;
+package tests.administrative.hospitalAdmin;
 
 import common.Config;
 import org.testng.Assert;
@@ -7,26 +7,25 @@ import tests.BaseTest;
 
 import java.awt.*;
 
-public class LoginTests extends BaseTest {
+public class LoginTestsHospitalAdmin extends BaseTest {
 
-    @Test(description = "Login of the Doctor with Valid Credentials", priority = 1)
+    @Test(description = "Login of the Hospital Administrator with Valid Credentials", priority = 1)
     public void loginWithValidCredentials() throws AWTException {
         driver.get(Config.BASE_URL);
         Assert.assertTrue(loginPage.pageIsDisplayed(), "The Login page isn't displayed");
         loginPage.handleLoginAlert();
-        loginPage.makeLogin(Config.DOCTORNAME,Config.DOCTORPASS);
-        Assert.assertTrue(dashboardPageDoctor.pageIsDisplayed(), "The Doctor Dashboard page isn't displayed");
-        //dashboardPageDoctor.getRequiredElements().forEach(i -> System.out.println(i.name));
-        dashboardPageDoctor.makeLogout();
+        loginPage.makeLogin(Config.HOSPITALADMINNAME,Config.HOSPITALADMINPASS);
+        Assert.assertTrue(dashboardPageHospitalAdmin.pageIsDisplayed(), "The Hospital Administrator Dashboard page isn't displayed");
+        dashboardPageHospitalAdmin.makeLogout();
         Assert.assertTrue(loginPage.pageIsDisplayed(), "The Login page isn't displayed");
     }
 
-    @Test(description = "Login of the Doctor with Invalid Credentials", priority = 2)
+    @Test(description = "Login of the Hospital Administrator with Invalid Credentials", priority = 2)
     public void loginWithInvalidCredentials() throws AWTException {
         driver.get(Config.BASE_URL);
         Assert.assertTrue(loginPage.pageIsDisplayed(), "The Login page isn't displayed");
         loginPage.handleLoginAlert();
-        loginPage.makeLogin(Config.DOCTORNAME + "1",Config.DOCTORPASS + "1");
+        loginPage.makeLogin(Config.HOSPITALADMINNAME + "1",Config.HOSPITALADMINPASS + "1");
         Assert.assertEquals(driver.getCurrentUrl(), Config.BASE_URL, "The user doesn't stay on the Login Page");
         Assert.assertTrue(loginPage.errorMessageIsDisplayed(), "The 'Username or password is incorrect.' error message isn't displayed");
     }

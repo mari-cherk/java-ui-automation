@@ -106,7 +106,7 @@
 
                     <forkCount>0</forkCount>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/TestNGSuites/ChromeSuites/clinical/LoginClinicTests.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/TestNGSuites/ChromeSuites/LoginTests.xml</suiteXmlFile>
                         <!--<suiteXmlFile>src/test/resources/TestNGSuites/AccessibilityTest.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
                     <argLine>
