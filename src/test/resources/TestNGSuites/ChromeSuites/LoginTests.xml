@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="LoginTests" preserve-order="true">
+<suite name="LoginTestsSuite" preserve-order="true">
 	<listeners>
 		<listener class-name="common.testHelper.FailureRetryListener"/>
 		<listener class-name="common.testHelper.TestListener"/>
 	</listeners>
 
-	<test name="LoginTests">
+	<test name="tests">
 		<parameter name="browser" value="chrome"/>
 		<classes>
 			<class name="tests.clinical.doctor.LoginTests">
