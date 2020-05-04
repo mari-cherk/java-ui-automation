@@ -16,9 +16,8 @@ public class LoginTests extends BaseTest {
         loginPage.handleLoginAlert();
         loginPage.makeLogin(Config.DOCTORNAME,Config.DOCTORPASS);
         Assert.assertTrue(dashboardPageDoctor.pageIsDisplayed(), "The Doctor Dashboard page isn't displayed");
-        //dashboardPageDoctor.getRequiredElements().forEach(i -> System.out.println(i.name));
-        dashboardPageDoctor.makeLogout();
-        Assert.assertTrue(loginPage.pageIsDisplayed(), "The Login page isn't displayed");
+        //dashboardPageDoctor.makeLogout();
+        //Assert.assertTrue(loginPage.pageIsDisplayed(), "The Login page isn't displayed");
     }
 
     @Test(description = "Login of the Doctor with Invalid Credentials", priority = 2)

@@ -28,8 +28,8 @@ public class DriverFactory {
         if (browser.equalsIgnoreCase("Chrome")) {
             initChromeDriverPath();
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("-incognito");
-            options.addArguments("--disable-popup-blocking");
+            options.addArguments("--incognito");
+            options.addArguments("--disable-user-media-security");
             DesiredCapabilities capabilities = DesiredCapabilities.chrome();
             capabilities.setCapability(ChromeOptions.CAPABILITY, options);
             driver = new ChromeDriver(capabilities);

@@ -9,8 +9,8 @@ public class Config {
 
     // Environment & URLs
     // Changed https to http only for local test
-    public static final String ENVIRONMENT_NAME = "demo.hospitalrun.io"; // "qastable.com" (previous)// Choose the environment on which you want to run automated tests (qadevelop.doublemap.com or qastable.doublemap.com)
-    public static final String BASE_URL = "http://" + ENVIRONMENT_NAME + "/#/login"; //"/admin/users/login" (previous)
+    public static final String ENVIRONMENT_NAME = "demo.hospitalrun.io";
+    public static final String BASE_URL = "http://" + ENVIRONMENT_NAME + "/#/login";
     public static final String BASE_URL_FOR_STOP = "https://" + ENVIRONMENT_NAME + "/admin/stops/view/";
     public static final String SUPER_ADMIN_SETTING_URL = "https://" + ENVIRONMENT_NAME + "/admin/settings";
     public static final String SUPER_ADMIN_USERS_URL = "https://" + ENVIRONMENT_NAME + "/admin/users";

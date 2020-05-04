@@ -857,52 +857,7 @@ public class DashboardPage extends BasePage {
             "Logout Button",
             By.className("logout"),
             false);
-/*
-    public static final PageElement inventoryTab = new PageElement(
-            "Inventory Tab",
-            By.xpath("//*[@id='ember702']"),
-            false);
 
-    public static final PageElement patientsTab = new PageElement(
-            "Patients Tab",
-            By.xpath("//*[@id='ember742']"),
-            true);
-
-    public static final PageElement schedulingTab = new PageElement(
-            "Scheduling Tab",
-            By.xpath("//*[@id='ember776']"),
-            false);
-
-    public static final PageElement imagingTab = new PageElement(
-            "Imaging Tab",
-            By.xpath("//*[@id='ember804']"),
-            false);
-
-    public static final PageElement medicationTab = new PageElement(
-            "Medication Tab",
-            By.xpath("//*[@id='ember832']"),
-            false);
-
-    public static final PageElement labsTab = new PageElement(
-            "Labs Tab",
-            By.xpath("//*[@id='ember860']"),
-            false);
-
-    public static final PageElement billingTab = new PageElement(
-            "Billing Tab",
-            By.xpath("//*[@id='ember888']"),
-            false);
-
-    public static final PageElement incidentTab = new PageElement(
-            "Incident Tab",
-            By.xpath("//*[@id='ember983']"),
-            false);
-
-    public static final PageElement adminTab = new PageElement(
-            "Admin Tab",
-            By.xpath("//*[@id='ember1011']"),
-            false);
-*/
     public DashboardPage(WebDriver driver) {
         super(driver);
     }

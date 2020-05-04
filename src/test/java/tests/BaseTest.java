@@ -34,7 +34,8 @@ public class BaseTest {
     public static WebDriver driver;
 
     //@BeforeTest
-    @BeforeClass
+    //@BeforeClass
+    @BeforeMethod
     @Parameters("browser")
     public void setupTestRun(@Optional("Chrome") String browserName) {
         driver = new DriverFactory(browserName).getDriver();
@@ -58,7 +59,8 @@ public class BaseTest {
     }*/
 
     //@AfterTest
-    @AfterClass
+    //@AfterClass
+    @AfterMethod
     public void turnDown() {
         if (driver != null) {
             driver.quit();
